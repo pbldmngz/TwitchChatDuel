@@ -1,6 +1,8 @@
 from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
 
+import pyautogui
+
 from time import sleep
 from twitchSocket import sendMSG
 
@@ -91,7 +93,7 @@ def moveMouse(x, y):
 
     x, y = multiplier*int(x), multiplier*int(y)
 
-    ms.move(x, y)
+    pyautogui.moveRel(x, y, duration=1)
 
 def ads():
     pressMouseBT("right")

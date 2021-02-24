@@ -1,12 +1,23 @@
 import socket
 
+channel = "spectratd"#"spectratd"#"arkhanzu" 
+token = "oauth:g61low...."
+
+def initData(ch, tk):
+    global channel, token
+
+    channel = ch
+    token = tk
+
+
 def twitchSocket():
+    global channel, token
     auth = {
         "server" : 'irc.chat.twitch.tv',
         "port" : 6667,
         "nickname" : "Mergus",
-        "token" : "oauth:g61low....",
-        "channel" : "spectratd"#"arkhanzu" 
+        "token" : token,
+        "channel" : channel
     }
 
     
